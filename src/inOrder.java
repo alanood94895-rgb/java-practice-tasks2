@@ -3,10 +3,16 @@ public class inOrder {
         System.out.println(inOrder(1, 2, 4, false));
     }
     public static boolean inOrder(int a, int b, int c, boolean bOk) {
-        if (bOk) {
-            return c > b;
-        } else {
-            return (b > a && c > b);
+        if (bOk == false) {
+            if (b > a && c > b) {
+                return true;
+            }
+                }
+        if (bOk == true) {
+            if (c > b) {
+                return true;
+            }
         }
+        return false;
     }
 }
